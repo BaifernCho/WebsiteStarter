@@ -7,27 +7,29 @@
     <style>
         #font1{
             font-size: 50px;
-
         }
-        .contenter{
-            margin: 20px;
+        div{
+            margin: 10px;
+        }
+        .contener{
+            margin-top: 100px;
+            text-align: center;
+        }
+        input {
+            border: 1px solid #ccc; /* กำหนดเส้นกรอบของ input ให้มีหนา 1px และสีเทาอ่อน */
+            padding: 4px; /* กำหนดระยะห่างระหว่างขอบและเนื้อหาของ input */
+            font-size: 16px; /* กำหนดขนาดตัวอักษร */
+            border-radius: 8px; /* กำหนดขอบมนมนเพื่อให้เส้นกรอบมีขอบโค้ง */
         }
     </style>
 </head>
 <body>
-<div class="contenter">
-    <div id="font1">
-        register
-    </div>
-    <div>
-        <div>name 
-            <input id="name">
-        </div>
-        <div>lastname
-            <input id="lastname">
-        </div>
-    </div>
-</div>
+<div class="contener">
+    <div>Register</div>
+    <div>name <input id="name" type="text"></div>
+    <div>lastname<input id="lastname" type="text"></div>
+
     
+</div>
 </body>
 </html>
