@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        body{
+            background-color: rgb(125, 128, 128);
+        }
+        /*1.แบบแม่ลูก (.container .item) อย่าลืมเว้นวรรค
+        การระบายสีclass ลูก*/
+        .container .item{
+            background-color: rgb(206, 131, 18);
+        }
+        /*2.แบบแม่ลูก (.container > .item) อย่าลืมเว้นวรรค*/
+        .main-container > .item{
+            background-color:  rgb(206, 131, 18);
+            padding: 50px;
+        }
+        /*3.แบบลูกติดกัน แต่ต้องมีclass base ให้มันก่อน  (.container.item) ไม่มีเว้นวรรค*/
+        .button{
+            border: 2px;
+            background-color: blueviolet;
+            padding: 10px;
+        }
+        .button.active{
+            background-color:  rgb(206, 131, 18);
+        }
+        /*4.แบบเพื่อนบ้าน (.container + .item) */
+        .item1 + .item2{
+            background-color:  rgb(206, 131, 18);
+        }
+        /*5.เลือกตาม attibute ตาม tpye */
+        input[type=text]{
+            border: 10px;
+            height: 100px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<!--1.แบบแม่ลูก (.container .item) อย่าลืมเว้นวรรค-->
+    <div class="container">
+        1.แบบแม่ลูก (.container .item) <br>contener
+        <div class="item">
+          item
+        </div>
+    </div>
+
+<!--2.แบบแม่ลูก (.container > .item) อย่าลืมเว้นวรรค-->
+<div class="main-container">
+    2.แบบแม่ลูก (.container > .item) <br>main-contener
+      <div class="item">
+        item
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+      </div>
+  </div>
+
+<!--3.แบบลูกติดกัน แต่ต้องมีclass base ให้มันก่อน (.container.item) ไม่มีเว้นวรรค-->
+
+    3.แบบลูกติดกัน แต่ต้องมีclass base ให้มันก่อน (.container.item) ไม่มีเว้นวรรค <br>
+    main-contener อย่าลืมเว้นวรรคใน class ใน html
+      <button class="button active">button</button>
+      <button class="button">button</button>
+ 
+<!--4.แบบเพื่อนบ้าน (.container + .item) -->
+<div class="main-container">
+    4.แบบเพื่อนบ้าน (.container + .item) <br>
+    main-contener
+      <div>
+        item
+        <div class="item1">item1</div>
+        <div class="item2">item2</div>
+      </div>
+  </div>
+
+<!--5.เลือกตาม attibute ตาม tpye-->
+
+5.เลือกตาม attibute <br>
+
+  <input name="input1" type="text">
+  <input name="input2" type="text">
+
+</body>
+</html>
